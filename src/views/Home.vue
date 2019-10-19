@@ -1,5 +1,5 @@
 <template>
-  <div class="fixedasstcontain">
+  <div class="fixedasstcontain">    
     <div class="content-main-asset">
       <div class="title">{{title}}资产使用轨迹</div>
       <div v-if="trace==true" class="gj">暂无资产使用轨迹</div>
