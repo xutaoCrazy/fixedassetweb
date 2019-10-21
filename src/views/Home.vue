@@ -1,7 +1,10 @@
 <template>
   <div class="fixedasstcontain">
     <div class="content-main-asset">
-      <div class="title">{{title}}资产使用轨迹</div>
+      <div class="title">
+        {{title}}资产使用轨迹
+        <span class="closes" @click="clsoe">X</span>
+      </div>
       <div v-if="trace==true" class="gj">暂无资产使用轨迹</div>
       <div class="content-main-wrap" v-else v-for="item in list" :key="item.gjid">
         <div class="main-left">
@@ -12,7 +15,7 @@
           <div class="time">{{item.inittime | formatDate('hh:mm:ss')}}</div>
         </div>
         <div class="main-right">
-          <div class="contentassignment" style="font-weight: 700;color: #676a6c;">{{item.fcaName}}</div>
+          <div class="contentassignment" style="font-weight: 400;color: #000;">{{item.fcaName}}</div>
           <div class="contentassignment" v-if="item.bce01e">
             <span>登记人:</span>
             {{item.bce01e}}
@@ -42,8 +45,13 @@ export default {}
 </script>
 
 <style scoped>
+.closes {
+  font-size: 18px;
+  position: absolute;
+  right: 14px;
+  cursor: pointer;
+}
 .fixedasstcontain {
-  border: solid 1px #e4e4e4;
   height: 100%;
 }
 #app {
@@ -64,8 +72,8 @@ export default {}
   padding-bottom: 10px;
 }
 .content-main-asset .main-right {
-  border-left: 1px solid #e7eaec;
-  border-top: 1px solid #e7eaec;
+  border-left: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
   padding-top: 10px;
   min-height: 60px;
   width: calc(100% - 130px);
@@ -76,9 +84,9 @@ export default {}
   padding: 5px;
   width: 30px;
   text-align: center;
-  border-top: 1px solid #e7eaec;
-  border-bottom: 1px solid #e7eaec;
-  border-left: 1px solid #e7eaec;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  border-left: 1px solid #e4e4e4;
   background: #f8f8f8;
   color: #000;
 }
@@ -108,7 +116,7 @@ export default {}
   color: #000;
   font-size: 14px;
   padding: 5px;
-  border-bottom: solid 1px #d8d8d8;
+  border-bottom: solid 1px #e4e4e4;
 }
 .gj {
   color: #000;

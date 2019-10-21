@@ -35,18 +35,5 @@
       "vue-cli-service lint",
       "git add"
     ]
-  },
-  "description": "",
-  "main": ".eslintrc.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xutaoCrazy/fixedassetweb.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xutaoCrazy/fixedassetweb/issues"
-  },
-  "homepage": "https://github.com/xutaoCrazy/fixedassetweb#readme"
+  }
 }
